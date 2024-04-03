@@ -13,6 +13,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: http://localhost:3000/
-        username: myFtpUserName
+        server: ${{ secrets.server }}
+        username: ${{ secrets.user }}
         password: ${{ secrets.ftp_password }}
